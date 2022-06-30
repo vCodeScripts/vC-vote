@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    background: none !important;
+}
+
+.maincon {
+    display: none;
+    width: 67vh;
+    height: 40vh;
+    border-radius: 3px;
+    background-color: #1F282F;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: height 1s;
+}
+.loadinggif {
+    width: 7%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%);
+}
+.votingForText {
+    font-size: 2.3vh;
+    margin-left: 2vh;
+    position: absolute;
+    margin-top: 2.3vh;
+}
+
+.chartBox {
+    width: 3vh;
+    height: 3vh;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6vh;
+    position: relative;
+    margin-right: 3vh;
+    margin-top: 1.2vh;
+    top: -0.3vh;
+}
+
+.hashtag {
+    position: relative;
+    right: 2vh;
+    font-size: 2.3vh;
+    top: 0;
+    margin-top: 1.5vh;
+}
+
+.sagUst {
+    position: absolute;
+    right: 0;
+    top: 0.95vh;
+}
+
+.topLine {
+    width: 95%;
+    height: 0.1vh;
+    background-color: white;
+    position: absolute;
+    top: 6.2vh;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 2pxs;
+}
+
+.voteName {
+    font-size: 2.1vh;
+    position: absolute;
+    margin-left: 2vh;
+    margin-top: 7vh;
+}
+
+.chooseText {
+    font-size: 1.6vh;
+    position: absolute;
+    margin-right: 2vh;
+    right: 0;
+    margin-top: 7vh;
+}
+
+
+.voteCon {
+
+    width: 100%;
+    height: 72%;
+    position: absolute;
+    top: 15%;
+    overflow-y: auto;
+}
+
+.Vote {
+    background-color: #83C86B;
+    border-radius: 3px;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+    border: none;
+    width: 15vh;
+    height: 3vh;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: 2vh;
+    margin-bottom: 2vh;
+}
+
+.newSelect {
+    background-color: #30475B;
+    width: 95%;
+    height: 18.5%;
+    border-radius: 2px;
+    position: relative;
+    left: 50%; 
+    margin-top: 3vh;
+    transform: translate(-50%);
+    margin-bottom: 1.5vh;
+
+}
+
+.selectName {
+    font-size: 2.2vh;
+    position: absolute;
+    margin-top: 1.6vh;
+    margin-left: 2vh;
+}
+
+.selectDesc {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 2vh;
+    font-size: 1.9vh;
+    margin-left: 2vh;
+}
+
+.VoteForThis {
+    width: 8vh;
+    height: 8vh;
+    background-color: white;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-right: 2vh;
+}
+
+.checkemoji {
+    opacity: 0;
+
+    font-size: 6vh;
+    color: #30475B;
+}
+
+::-webkit-scrollbar-track {
+    background: #1F282F; 
+  }
+
+.bottompart {
+    display: none;
+}
+
+.yourOption {
+    font-size: 1.8vh;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    color: white;
+    transform: translate(-50%);
+    white-space: nowrap;
+
+}
+
+.thankU {
+    font-size: 2.2vh;
+    position: absolute;
+    left: 50%;
+    top: 65%;
+    color: white;
+    transform: translate(-50%);
+    white-space: nowrap;
+
+}
