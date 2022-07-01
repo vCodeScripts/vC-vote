@@ -77,6 +77,7 @@ $(document).on('click','.Vote', function(){
             setTimeout(function(){ 
                 $('.maincon').fadeOut();
                 $.post('https://vC-vote/close');
+                $('.congratsDiv').fadeOut();
             }, 3000)
 
         }, 250)
