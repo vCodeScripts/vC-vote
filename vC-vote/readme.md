@@ -11,6 +11,10 @@ Video: https://streamable.com/e8y9jt
 
 Metadata Item Photo: https://prnt.sc/s2LvRV1XQ5P
 
+Dependencies:
+qb-core
+qb-inventory (If you want the votingpin item option)
+
 
 Installation: If you don't want to give a Voting Pin After Someone Voted, You Can Just Drag And Drop Our Script Into Your Resources Folder.
 
