@@ -39,7 +39,7 @@ Election: " + itemData.info.election + "
 Your Code Should Look Something Like This: https://prnt.sc/V1P80U12F3wO
 
 Then You Are Finished And Ready To Go, Startup Your Server And Have Fun.
-DISCLAIMER ! DONT FORGET TO RESTART YOUR SERVER AFTER YOU ADDED THE CHANGES IN SHARED.LUA
+DISCLAIMER ! DONT FORGET TO RESTART YOUR SERVER AFTER YOU ADDED THE CHANGES IN items.lua
 
 Have Fun,
 
