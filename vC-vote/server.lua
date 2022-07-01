@@ -35,14 +35,29 @@ RegisterServerEvent('vC-vote:voteWithData', function(data)
     local Player = QBCore.Functions.GetPlayer(source)
     local information = { cid =Player.PlayerData.citizenid, vote = data}
     local tablo = json.decode(loadFile)
-    table.insert(tablo, information)
-    SaveResourceFile(GetCurrentResourceName(), "votes.json", json.encode(tablo), -1)
-    if vCode.GiveItem then
-        local info = {
-            election = vCode.ElectionName,
-        }
-        Player.Functions.AddItem('votingpin',1, false, info)
+    local cid = Player.PlayerData.citizenid
+    print(cid)
+    if json.encode(tablo) == '{}' then
+        cb(true)
     end
+
+    for k,v in pairs(tablo) do
+        print(v.cid)
+        if v.cid == cid then
+            print('HE HAS ALREADY VOTED')
+            
+        else
+            table.insert(tablo, information)
+            SaveResourceFile(GetCurrentResourceName(), "votes.json", json.encode(tablo), -1)
+            if vCode.GiveItem then
+                local info = {
+                    election = vCode.ElectionName,
+                }
+                Player.Functions.AddItem('votingpin',1, false, info)
+            end
+        end
+    end
+    
 end)
 
 
