@@ -46,7 +46,7 @@ RegisterServerEvent('vC-vote:voteWithData', function(data)
 end)
 
 
-QBCore.Functions.CreateCallback('vC-vote:server:countCallback', function(source,cb)
+QBCore.Functions.CreateCallback('vC-vote:countCallback', function(source,cb)
     local toplamvotes = 0
     local loadFile= LoadResourceFile(GetCurrentResourceName(), "./votes.json")
 
