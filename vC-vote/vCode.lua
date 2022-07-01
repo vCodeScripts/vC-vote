@@ -23,6 +23,6 @@ vCode.Locations = {
     vector3(-1450.71, -236.83, 61.13)
 }
 
-
+vCode.Toplam = 0
 
 vCode.GiveItem = true
