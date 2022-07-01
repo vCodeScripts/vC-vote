@@ -31,7 +31,7 @@ Citizen.CreateThread(function()
 
 
                 if IsControlJustPressed(0,38) then
-                    TryToVote();
+                    TryToVote()
                 end
             else
 
