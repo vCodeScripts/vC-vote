@@ -12,6 +12,18 @@ addEventListener('message', function(event){
     if (poy.type == 'show'){
         $('.maincon').fadeIn();
         SetupData();
+    } else if (poy.type == "close"){
+        $('.bottompart').fadeOut()
+        setTimeout(function(){
+            $('.maincon').css('height', '30vh');
+            setTimeout(function(){
+                $('.maincon').fadeOut();
+                $('.checkemoji').css('opacity', '0')
+                $('.congratsDiv').fadeOut();
+
+            }, 180)
+            
+        }, 180)
     }
 })
 
