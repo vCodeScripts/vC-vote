@@ -50,7 +50,7 @@ QBCore.Functions.CreateCallback('vC-vote:countCallback', function(source,cb)
     local toplamvotes = 0
     local loadFile= LoadResourceFile(GetCurrentResourceName(), "./votes.json")
 
-    bizimki.newbizimki = {}
+
     for k,v in pairs(vCode.Options) do
         v.count = 0
     end
