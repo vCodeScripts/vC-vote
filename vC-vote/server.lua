@@ -45,7 +45,7 @@ RegisterServerEvent('vC-vote:voteWithData', function(data)
         print(v.cid)
         if v.cid == cid then
             print('HE HAS ALREADY VOTED')
-            
+            TriggerClientEvent('vC-vote:closeScript', Player.PlayerData.source)
         else
             table.insert(tablo, information)
             SaveResourceFile(GetCurrentResourceName(), "votes.json", json.encode(tablo), -1)
