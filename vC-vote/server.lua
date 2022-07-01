@@ -14,7 +14,7 @@ QBCore.Functions.CreateCallback('vC-vote:hasPlayerVoted', function(source,cb)
     if json.encode(tablo) == '{}' then
         cb(true)
     end
-    io.open('votes.json',"w"):close()
+
     for k,v in pairs(tablo) do
         print(v.cid)
         if v.cid == cid then
