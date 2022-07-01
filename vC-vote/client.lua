@@ -6,6 +6,14 @@ RegisterNUICallback('close', function()
     SetNuiFocus(false, false)
 end)
 
+RegisterNetEvent('vC-vote:closeScript', function()
+      SetNuiFocus(false, false)  
+      SendNUIMessage({
+         type = "close",
+      })
+        
+end)
+
 
 
 RegisterNUICallback('getConfig', function(data,cb)
