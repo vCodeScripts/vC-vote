@@ -28,20 +28,7 @@ QBCore.Functions.CreateCallback('vC-vote:hasPlayerVoted', function(source,cb)
 
 end)
 
-RegisterServerEvent('vC-vote:countallVotes', function()
-    local loadFile= LoadResourceFile(GetCurrentResourceName(), "./votes.json")
-    local tablo = json.decode(loadFile)
-    for k, v in pairs(tablo) do
-        
-        print(k, json.encode(v))
-        vote = v.vote
-        vCode.Options[vote].count = vCode.Options[vote].count + 1
 
-    end
-    if vote ~= nil then
-        print(vCode.Options[vote].count)                                            
-    end
-end)
 
 RegisterServerEvent('vC-vote:voteWithData', function(data)
     local loadFile= LoadResourceFile(GetCurrentResourceName(), "./votes.json")
@@ -59,10 +46,29 @@ RegisterServerEvent('vC-vote:voteWithData', function(data)
 end)
 
 
-RegisterCommand('countvotes', function(source)
-    TriggerEvent('vC-vote:countallVotes')
-end)
+QBCore.Functions.CreateCallback('vC-vote:server:countCallback', function(source,cb)
+    local toplamvotes = 0
+    local loadFile= LoadResourceFile(GetCurrentResourceName(), "./votes.json")
 
+    bizimki.newbizimki = {}
+    for k,v in pairs(vCode.Options) do
+        v.count = 0
+    end
+    local tablo = json.decode(loadFile)
+    for k, v in pairs(tablo) do
+        vote = v.vote
+
+        toplamvotes = toplamvotes + 1
+        vCode.Toplam = toplamvotes 
+        print(k, json.encode(v))
+
+        vCode.Options[vote].count = vCode.Options[vote].count + 1
+
+    end
+
+    cb(vCode)
+
+end)
 --[[
     local tablo = json.decode(loadFile)
     table.insert(tablo, information)
