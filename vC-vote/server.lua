@@ -10,19 +10,20 @@ QBCore.Functions.CreateCallback('vC-vote:hasPlayerVoted', function(source,cb)
     local Player = QBCore.Functions.GetPlayer(source)
     local cid = Player.PlayerData.citizenid
     local tablo = json.decode(loadFile)
-    print(cid)
+    print(json.encode(tablo))
+
+
     if json.encode(tablo) == '{}' then
         cb(true)
     end
 
-    for k,v in pairs(tablo) do
-        print(v.cid)
-        if v.cid == cid then
-            print('burda')
-            cb(false)
-        else
-            cb(true)
-        end
+    if tablo[cid] == nil then
+        print('burda')
+        cb(true)
+    else
+        cb(false)
+
+
     end
 
 
