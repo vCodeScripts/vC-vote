@@ -37,9 +37,7 @@ RegisterServerEvent('vC-vote:voteWithData', function(data)
     local tablo = json.decode(loadFile)
     local cid = Player.PlayerData.citizenid
     print(cid)
-    if json.encode(tablo) == '{}' then
-        cb(true)
-    end
+ 
 
     for k,v in pairs(tablo) do
         print(v.cid)
